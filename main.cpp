@@ -4,21 +4,21 @@ constexpr int N_ELEMENTS = 100;
 
 int main()
 {
-    int *b = new int[NELEMENTS]; // NELEMENTS helyett N_ELEMENTS-et kell írni
-    std::cout << '1-100 ertekek duplazasa' // '' helyett "" közé kell rakni a stringet, és nincs befejezve a kiíratás
-    for (int i = 0;) // Hiányzik két argumentum is
+    int *b = new int[N_ELEMENTS];
+    std::cout << "1-100 ertekek duplazasa" << std::endl;
+    for (int i = 0; i < N_ELEMENTS, i++;)
     {
         b[i] = i * 2;
     }
-    for (int i = 0; i; i++) // Hiányzik a i mellől, hogy meddig növekedhet, és az i++ után egy ';'
+    for (int i = 0; i < N_ELEMENTS, i++;)
     {
-        std::cout << "Ertek:" // Nincs befejezve a kiíratás
+        std::cout << "Ertek:" << b[i] << std::endl;
     }    
     std::cout << "Atlag szamitasa: " << std::endl;
     int atlag;
-    for (int i = 0; i < N_ELEMENTS, i++) // Hiányzik az i++ után egy ';'
+    for (int i = 0; i < N_ELEMENTS, i++;)
     {
-        atlag += b[i] // Hiányzik a végéről egy ';'
+        atlag += b[i];
     }
     atlag /= N_ELEMENTS;
     std::cout << "Atlag: " << atlag << std::endl;
